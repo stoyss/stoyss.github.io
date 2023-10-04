@@ -3,24 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stoys Windows Beta Sürümü İndir</title>
+    <title>Stoys</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: linear-gradient(120deg, #007bff, #ffffff);
+        }
+
+        #interactive-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: none;
+            z-index: -1;
+        }
+
+        header {
+            background-color: #ffffff;
+            color: #007bff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #007bff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        main h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .download-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 2px solid #0056b3;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .download-button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ffffff;
+            color: #007bff;
+        }
+    </style>
 </head>
-<body style="background-color: #3498db; color: white; text-align: center; padding: 50px; font-family: Arial, sans-serif;">
-
-    <h1>Stoys Windows Beta Sürümü</h1>
-    <p>Stoys Windows Beta Sürümü ile bilgisayar deneyiminin geleceğini yaşayın!</p>
-
-    <p>Beta sürümünü indirmek için aşağıdaki düğmeye tıklayın:</p>
+<body>
+    <div id="interactive-background"></div>
+    <header>
+        <h1>Stoys</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Anasayfa</a></li>
+                <li><a href="/download">İndir</a></li>
+                <li><a href="/about">Hakkımızda</a></li>
+            </ul>
+        </nav>
+    </header>
     
-    <a href="stoys.exe" download>
-        <button style="background-color: #2980b9; /* Blue */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 8px;">
-            Stoys Windows Beta İndir
-        </button>
-    </a>
+    <main>
+        <h2>Stoys'a Hoş Geldiniz</h2>
+        <p>Son sürüm <strong>Stoys Windows Beta</strong>'yı keşfedin, ihtiyaçlarınız için güçlü bir yazılım.</p>
+        <a class="download-button" href="stoys.exe" download>Hemen İndir</a>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Stoys. Tüm hakları saklıdır.</p>
+    </footer>
 
-    <p>Yeni özellikleri, artırılmış performansı ve en son teknolojiyi keşfedin!</p>
-
-    <p style="color: red;">Not: Bu bir beta sürümüdür. Kullanımı kendi sorumluluğunuzdadır ve kurulumdan önce önemli verilerinizi yedekleyin.</p>
-
+    <script>
+        const background = document.getElementById('interactive-background');
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            background.style.backgroundPosition = `${mouseX * 100}% ${mouseY * 100}%`;
+        });
+    </script>
 </body>
 </html>
